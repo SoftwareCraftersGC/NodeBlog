@@ -1,30 +1,28 @@
+"use strict";
+
+
 class Post {
-    private var _title;
-    private var _content;
-    private var _author;
-    private var _tags;
-
-    public get title() {
-        return _title;
-    }
-
-    public get content() {
-        return _content;
-    }
-
-    public get author() {
-        return _author;
-    }
-
-    public get tags() {
-        return _tags;
-    }
-
     constructor(title, content, author, tags) {
         this._title = title;
         this._content = content;
         this._author = author;
         this._tags = tags;
+    }
+
+    get title() {
+        return this._title;
+    }
+
+    get content() {
+        return this._content;
+    }
+
+    get author() {
+        return this._author;
+    }
+
+    get tags() {
+        return this._tags;
     }
 }
 
