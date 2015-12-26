@@ -1,13 +1,17 @@
+"use strict";
+
 class PostService {
     constructor(postRepository) {
         this.postRepository = postRepository;
     }
 
-    public createPost(post) {
+    createPost(post) {
         this.postRepository.save(post)
     }
 
-    public getAllPosts () {
+    getAllPosts () {
         return this.postRepository.getAllPosts()
     }
 }
+
+module.exports = PostService;
