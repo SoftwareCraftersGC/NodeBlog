@@ -5,8 +5,8 @@ class GetAllPostsAction {
         this.postService = postService;
     }
 
-    execute() {
-        return this.postService.getAllPosts();
+    execute(callback) {
+        return this.postService.getAllPosts(callback);
     }
 }
 

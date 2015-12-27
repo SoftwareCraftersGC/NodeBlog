@@ -1,0 +1,13 @@
+{
+  "name": "Infracstructure",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "mongodb": "^2.1.2",
+    "monk": "^1.0.1",
+    "mongoskin": "1.3.20"
+  }
+}
