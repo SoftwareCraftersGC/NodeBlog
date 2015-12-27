@@ -8,9 +8,9 @@ class CreatePostAction {
         this.postService = postService;
     }
 
-    execute(postData) {
+    execute(postData, callback) {
         let post = this.toPost(postData);
-        this.postService.createPost(post);
+        this.postService.createPost(post, callback);
     }
 }
 

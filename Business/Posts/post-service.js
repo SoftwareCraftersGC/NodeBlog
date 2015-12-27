@@ -5,8 +5,8 @@ class PostService {
         this.postRepository = postRepository;
     }
 
-    createPost(post) {
-        this.postRepository.save(post)
+    createPost(post, callback) {
+        this.postRepository.save(post, callback)
     }
 
     getAllPosts (callback) {

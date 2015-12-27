@@ -2,15 +2,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var PostService = require('../Business/Posts/post-service');
-var Post = require('../Business/Posts/post');
 var GetAllPostsAction = require('../Business/actions/get-all-posts');
 var CreatePostAction = require('../Business/actions/create-a-post');
 var MongoPostRepository = require('../Infracstructure/mongo-post-repository');
 
 var app = express();
 app.use(bodyParser.json());
-
-
 
 var postService = new PostService(new MongoPostRepository('mongodb://localhost:27017/node-blog'));
 

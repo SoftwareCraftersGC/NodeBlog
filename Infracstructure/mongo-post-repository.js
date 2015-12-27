@@ -11,7 +11,7 @@ class MongoPostRepository {
 
     getAllPosts(callback) {
         var posts = [];
-        var cursor = this.db.collection('postCollection').find( );
+        var cursor = this.db.collection('postCollection').find();
         cursor.each((err, doc) => {
             if (err) callback(err);
             if (doc!=null) posts.push(doc);
@@ -22,6 +22,13 @@ class MongoPostRepository {
             posts.push(doc);
 
         });
+    }
+
+    save(post, callback) {
+        this.db.collection('postCollection').insert(post, {w:1}, function(err, records) {
+            console.log();
+            callback(err, `${records.insertedIds[0]} created`);
+        })
     }
 }
 
