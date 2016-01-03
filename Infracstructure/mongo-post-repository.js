@@ -11,16 +11,12 @@ class MongoPostRepository {
 
     getAllPosts(callback) {
         var posts = [];
-        var cursor = this.db.collection('postCollection').find();
-        cursor.each((err, doc) => {
-            if (err) callback(err);
-            if (doc!=null) posts.push(doc);
-            else {
-                this.db.close();
+        this.db.collection('postCollection').find({}).toArray(function (err, posts) {
+            if (err) {
+                callback(err);
+            } else {
                 callback(null, posts);
             }
-            posts.push(doc);
-
         });
     }
 
