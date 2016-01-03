@@ -1,7 +1,3 @@
-### Blog
+### Node blog
 
-A post contains:
-- Title
-- Content
-- Author
-- Tags
+A simple blog app to learn how nodejs works
