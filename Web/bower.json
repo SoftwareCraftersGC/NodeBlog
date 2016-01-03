@@ -1,0 +1,19 @@
+{
+  "name": "Web",
+  "description": "",
+  "main": "",
+  "authors": [
+  ],
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}
