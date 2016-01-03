@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 console.log(path.isAbsolute('Factories'));
 
 app.set('views', __dirname + '/../Web/views');
+app.use('/public', express.static(__dirname + "/../Web/public"));
 app.set('view engine', 'hbs');
 app.engine('.hbs', handlebars({extname:'hbs'}));
 
