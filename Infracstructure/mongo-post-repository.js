@@ -17,7 +17,6 @@ class MongoPostRepository {
             } else {
                 callback(null, posts);
             }
-            this.db.close();
         });
     }
 
