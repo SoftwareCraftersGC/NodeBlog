@@ -3,7 +3,6 @@ var MongoClient = require('mongodb').MongoClient;
 
 class MongoPostRepository {
     constructor(connection) {
-        this.db = null;
         MongoClient.connect(connection, (err, dbConnection) =>
             this.db = dbConnection
         );
@@ -22,7 +21,6 @@ class MongoPostRepository {
 
     save(post, callback) {
         this.db.collection('postCollection').insert(post, {w:1}, function(err, records) {
-            console.log();
             callback(err, `${records.insertedIds[0]} created`);
         })
     }
